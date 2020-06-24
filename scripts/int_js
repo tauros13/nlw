@@ -1,0 +1,80 @@
+// comments
+// document.write('Hello') //documento que estamos a usar, objecto com funcionalidade de escrever
+
+// variaveis, tipos de dados variavel serve para guardar memoria para usar mais tarde.var = let
+// var myvar // undefined
+// let myvar = 'He'
+// const myconst = 'He'
+
+// document.write(myconst + myvar)
+
+// TIPOS DE DADOS
+
+// string
+
+// const s1 = "isto é uma string"
+// 'isto é uma string'
+// ´isto é uma string´  //´´(crases)
+
+// document.write(s1)
+
+// number
+// const n1 = '1' // se puser peliculas passa a string então ele junta os 2 porque um é string e o outro é numero
+// const n2 = 12
+// document.write(n1 + n2)
+
+// boolean recebe 2 valores true ou false
+// const bTrue = true
+// const bFalse = false
+// document.write(bFalse)
+
+// estrutura de dados
+
+// objeto = tem propriedades e funcionalidades
+// const pessoa = {
+//     altura: '1,80m',
+//     idade: 24,
+//     solteiro: true,
+//     correr() {
+//         return 'run forest'
+//     }
+// }
+
+// document.write(pessoa.correr())//se puser só a const pessoa em dá object Object tenho de acessar ás propriedades do objeto com o '.'
+
+// tipos de dados Array - vectores(coleção de alguma coisa, coleção de dados)[...]
+// const colecaoDeBolinhas = ['blue', 'green', 'red', 1, { name: 'Ricardo' }]
+
+// document.write(colecaoDeBolinhas[4].name)
+
+// registar a função
+// function sayMyName(name) {
+//     document.write(name)
+// }
+
+// executar a função
+// sayMyName('Douglas')
+// sayMyName('Beatriz')
+// sayMyName('Rodrigo')
+
+// condicionais
+
+// const notaFinal = 4
+
+// if (true) {
+//     //caminho 1
+// } else {
+//     //caminho 2
+// }
+
+// if (notaFinal < 5) {
+//     document.write('Reprovado')
+// } else {
+//     document.write('Aprovado')
+// }
+
+// loop repetições
+
+// for (i = 0; i < 10; i++) { //i++ = i = i +1
+//     document.write(`<p>${i}</p>`)
+// } 
