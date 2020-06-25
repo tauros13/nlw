@@ -1,80 +1,40 @@
-<!DOCTYPE html>
-<html lang="pt_pt">
+{% extends "layout.html" %}
 
-<!--
-    Hypertext
-        hiper texto
+{% set pageId = "page-home" %}
 
-    Markup
-        marcação de textp
+<!-- Hypertext hiper texto Markup marcação de textp Language linguagem -->
 
-    Language
-        linguagem
--->
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecoleta</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="/styles/main.css">
+{% block styles %}
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
 
-    <link rel="stylesheet" href="/styles/responsive.css">
+{% block content %}
+    <div class="content">
+        <header>
+            <img src="/assets/logo.svg" alt="marca">
+            <a href="/create-point">
+                <span></span>
+                inscreva o ponto de Recolha</a>
+        </header>
 
-</head>
+        <main>
+            <h1>Seu marketplace de coleta de residuos</h1>
 
-<body>
+            <p>Ajudamos pessoas a encontrarem pontos de recolha de forma eficiente</p>
 
-    <div id="page-home">
-        <div class="content">
-
-            <header>
-                <img src="/assets/logo.svg" alt="marca">
-                <a href="/create-point">
-                    <span></span>
-                    inscreva o ponto de Recolha</a>
-            </header>
-
-            <main>
-
-                <h1 class="red">Seu marketplace de coleta de residuos</h1>
-
-
-                <p>Ajudamos pessoas a encontrarem pontos de recolha de forma eficiente</p>
-
-                <a href="#"><span></span><strong> pesquisar pontos de recolha</strong></a>
-
-            </main>
-
-        </div>
+            <a href="#">
+                <span></span>
+                <strong>pesquisar pontos de recolha</strong>
+            </a>
+        </main>
     </div>
+{% endblock content %}
 
-    <div id="modal" class="hide">
-        <div class="content">
-            <div class="header">
-                <h1>Pontos de Recolha</h1>
-                <a href="#">Fechar</a>
-            </div>
-            <form action="/search-results.html">
-                <label for="search">Cidade</label>
-                <div class="search field">
-                    <input type="text" name="search" placeholder="Pesquise a Cidade">
-                    <button>
-                        <img src="/assets/search.svg" alt="pesquisar">
-                    </button>
-                </div>
+{% block modal %}
+    {% include "partials/modal.html" %}
+{% endblock modal %}
 
-            </form>
-        </div>
-    </div>
-
-
+{% block scripts %}
     <script src="/scripts/index.js"></script>
-</body>
-
-</html>
+{% endblock scripts %}

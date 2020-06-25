@@ -8,7 +8,7 @@ server.use(express.static("public"))
 
 
 // utilizar template engine
-const nunjucks = require("nunjuks")
+const nunjucks = require("nunjucks")
 nunjucks.configure("src/views", {
     express: server,
     noCache: true
@@ -22,11 +22,15 @@ nunjucks.configure("src/views", {
 // req : é uma requisição
 // res : é uma resposta
 server.get("/", (req, res) => {
-    res.render(__dirname + "/views/index.html")
+    return res.render("index.html", { title: "um título" })
 })
 
 server.get("/create-point", (req, res) => {
-    res.sendFile(__dirname + "/views/create-point.html")
+    return res.render("create-point.html")
+})
+
+server.get("/search", (req, res) => {
+    return res.render("search-results.html")
 })
 
 //ligar o servidor
